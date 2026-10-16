@@ -1,150 +1,63 @@
 # Muhammad Ahmad - Portfolio Platform
 
-A full-stack portfolio and blog platform built with **Laravel 13** and **Vue.js 3 (TypeScript)**, featuring a modern admin dashboard with analytics, AI chatbot integration, and a responsive design.
+A full-stack portfolio and blog platform built with **Laravel 13** and **Vue.js 3 (TypeScript)**, featuring an admin dashboard, analytics, AI chatbot, and responsive UI.
 
-Built by **[Muhammad Ahmad](https://github.com/sheikhahmad62720)** — Vue.js & Laravel Developer at NBTHUB, Haroonabad, Pakistan.
-
----
+Built by **[Muhammad Ahmad](https://github.com/sheikhahmad62720)** — Vue.js & Laravel Developer at NBTHUB, Pakistan.
 
 ## Features
 
-### Public Website
-- Modern, animated portfolio homepage (hero, typewriter, tech orbit, stats)
-- About page with skills, experience, and education timeline
-- Portfolio showcase with project filtering by category
-- Blog system with categories, tags, and rich content
-- Contact form with server-side validation
-- Newsletter subscription
-- Dark/light theme toggle
-- Fully responsive design
-
-### Admin Dashboard
-- Real-time analytics: visitors, page views, geography, devices, browsers, top content
-- Projects, Blogs, Skills, Services, Experience, Education, Certificates, Testimonials — full CRUD
-- Message inbox with reply and bulk delete
-- Media library with folders and file upload
-- Settings management (general, contact, social, system, AI, SEO)
-- Role-based access control (Admin / Client / Guest)
-
-### AI & Automation
-- AI-powered chatbot (OpenAI / Gemini / Claude integration)
-- AI conversation history and training data management
-- Configurable AI prompts
-
----
+- **Portfolio:** Projects, skills, experience, education, and certificates.
+- **Blog:** Categories, tags, and rich content management.
+- **Admin Dashboard:** Analytics and complete content management (CRUD).
+- **AI Chatbot:** Integration with OpenAI, Gemini, and Claude.
+- **Additional Features:** Contact form, newsletter, media library, role-based access, and dark/light theme.
 
 ## Tech Stack
 
-**Backend:** Laravel 13 | PHP 8.3+ | SQLite (MySQL ready) | Laravel Sanctum | Laravel Pint
-
-**Frontend:** Vue.js 3 | TypeScript | Vite 8 | Pinia | Vue Router | Tailwind CSS | Chart.js | Swiper | Heroicons
-
-**Dev Tools:** Composer | NPM | Git
-
----
+- **Backend:** Laravel 13, PHP 8.3+, Laravel Sanctum
+- **Frontend:** Vue.js 3, TypeScript, Pinia, Vue Router, Tailwind CSS
+- **Tools:** Vite, Composer, NPM, Git
+- **Database:** SQLite (MySQL ready)
 
 ## Requirements
 
-- PHP 8.3 or higher
+- PHP 8.3+
 - Composer 2.x
-- Node.js 20.x LTS or higher
-- NPM 10.x or higher
-
----
+- Node.js 20+
+- NPM 10+
 
 ## Quick Start
 
 ```bash
-# 1. Clone the repository
 git clone <repo-url>
 cd Ahmad_Portfolio
-
-# 2. Install PHP dependencies
 composer install
-
-# 3. Install frontend dependencies
 npm install
-
-# 4. Setup environment
 cp .env.example .env
 php artisan key:generate
+```
 
-# 5. Setup database (SQLite)
-touch database/database.sqlite
+Create the SQLite database file at `database/database.sqlite`, then run:
+
+```bash
 php artisan migrate --seed
-
-# 6. Build frontend assets
 npm run build
-
-# 7. Start the server
 php artisan serve
-
-# 8. (Development) Start Vite dev server
-npm run dev
 ```
 
 Open **http://localhost:8000** in your browser.
 
-> **Note:** This is an API-first SPA. The Laravel server only serves the Vue application shell at `/`; all data flows through the REST API at `/api/v1`.
-
----
-
-## One-Command Setup
+### Quick Commands
 
 ```bash
-composer setup
+composer setup  # Install and configure the project
+composer dev    # Run development servers
+composer test   # Run tests
 ```
-
-Runs install, key generation, migration, and frontend build automatically.
-
-### Run All Dev Servers
-
-```bash
-composer dev
-```
-
-Runs Laravel server, queue worker, logs (Pail), and Vite concurrently.
-
----
-
-## Seeders
-
-Run with `php artisan migrate --seed`:
-
-- **RoleSeeder** — Admin, Client, Guest roles
-- **UserSeeder** — Default admin user
-- **TechnologySeeder** — 27 technologies across categories
-- **SettingSeeder** — Default settings in general, contact, social, system, ai, seo groups
-
----
-
-## Tests
-
-```bash
-composer test
-```
-
----
 
 ## Documentation
 
-See the `docs/` directory for deeper documentation:
-
-- `docs/ARCHITECTURE.md` — System architecture
-- `docs/DATABASE_SCHEMA.md` — Database schema details
-- `docs/TECHNICAL_REQUIREMENTS.md` — Requirements specification
-
----
-
-## Roadmap / Planned Features
-
-- Client portal for project management
-- Invoicing and billing
-- Support tickets and meetings
-- Advanced SEO settings
-- Email templates
-
----
+See the `docs/` directory for architecture, database schema, and technical requirements.
 
 ## License
 
