@@ -56,7 +56,7 @@ class TechnologySeeder extends Seeder
         ];
 
         foreach ($technologies as $tech) {
-            DB::table('technologies')->insert([
+            DB::table('technologies')->insertOrIgnore([
                 'name' => $tech['name'],
                 'slug' => Str::slug($tech['name']),
                 'category' => $tech['category'],
