@@ -12,7 +12,7 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/ico" href="/build/favicon.ico">
-    @vite(['resources/css/app.css', 'resources/js/app.ts'])
+    @vite(['resources/js/app.ts'])
 </head>
 
 <body class="antialiased">
