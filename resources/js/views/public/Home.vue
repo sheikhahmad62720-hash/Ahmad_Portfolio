@@ -2,7 +2,6 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 import api from '@/utils/api';
-import TechOrbit from '@/components/TechOrbit.vue';
 import TypeWriter from '@/components/TypeWriter.vue';
 import LoadingSpinner from '@/components/LoadingSpinner.vue';
 import type { Project, Skill, Testimonial, BlogPost } from '@/types';
@@ -203,7 +202,7 @@ function formatDate(date: string) {
     <div class="min-h-screen">
         <!-- Hero Section -->
         <section
-            class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-navy pt-24 sm:pt-0 pb-16 sm:pb-0">
+            class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-navy pt-16 sm:pt-0 pb-16 sm:pb-0">
             <!-- Gradient Background -->
             <div class="absolute inset-0 bg-gradient-to-br from-copper/5 via-transparent to-electric/5"></div>
             <div class="absolute inset-0 grid-bg opacity-30"></div>
@@ -244,10 +243,19 @@ function formatDate(date: string) {
                         </div>
                     </div>
 
-                    <!-- Right: 3D Orbit -->
-                    <div
-                        class="flex justify-center lg:justify-end mt-8 lg:mt-0 max-w-[260px] sm:max-w-none mx-auto scale-90 sm:scale-100">
-                        <TechOrbit />
+                    <!-- Right: Profile Image -->
+                    <div class="flex justify-center lg:justify-end mt-16 lg:mt-12">
+                        <div class="relative">
+                            <div
+                                class="aspect-[5/4] max-w-sm mx-auto lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border-4 border-copper/20 hover:border-copper/40 transition-all">
+                                <img src="/assets/ahmad.webp" alt="Muhammad Ahmad"
+                                    class="w-full h-full object-cover object-top" />
+                            </div>
+                            <div class="absolute -bottom-4 -right-4 glass-card p-3">
+                                <div class="text-2xl font-bold text-gradient">5+</div>
+                                <div class="text-xs font-mono text-gray-600 dark:text-gray-400">Years Exp.</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
