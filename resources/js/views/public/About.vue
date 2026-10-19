@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import api from '@/utils/api';
-import profileImage from '@/assets/ahmad.webp';
+
 
 const loading = ref(true);
 const experiences = ref<any[]>([]);
@@ -58,7 +58,7 @@ onMounted(() => {
                     <div class="relative animate-scale-in max-w-sm mx-auto lg:max-w-none">
                         <div
                             class="aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-copper/20 hover:border-copper/40 transition-all">
-                            <img :src="profileImage" alt="Muhammad Ahmad"
+                            <img src="/assets/ahmad.webp" alt="Muhammad Ahmad"
                                 class="w-full h-full object-cover object-top" />
                         </div>
                         <div class="absolute -bottom-6 -right-6 glass-card p-4">
