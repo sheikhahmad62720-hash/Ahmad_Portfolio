@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import api from '@/utils/api';
 import LoadingSpinner from '@/components/LoadingSpinner.vue';
+import { useFormValidation, contactSchema } from '@/composables/useFormValidation';
 
 const loading = ref(false);
 const successMessage = ref('');
@@ -14,12 +15,16 @@ const form = ref({
     message: '',
 });
 
-const errors = ref<Record<string, string>>({});
+const { errors, validate } = useFormValidation(contactSchema);
 
 async function submitForm() {
     loading.value = true;
     successMessage.value = '';
-    errors.value = {};
+
+    if (!validate(form.value)) {
+        loading.value = false;
+        return;
+    }
 
     try {
         const response = await api.post('/contact', form.value);

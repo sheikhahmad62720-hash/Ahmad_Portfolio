@@ -56,7 +56,7 @@ async function handleLogout() {
         <!-- Logo -->
         <div class="flex items-center justify-between h-16 px-6 border-b border-gray-200 dark:border-gray-700">
           <span class="text-xl font-bold text-gradient">Admin Panel</span>
-          <button @click="sidebarOpen = false" class="md:hidden">
+          <button @click="sidebarOpen = false" class="md:hidden" aria-label="Close sidebar">
             <XMarkIcon class="w-6 h-6" />
           </button>
         </div>
@@ -68,7 +68,7 @@ async function handleLogout() {
             :key="item.path"
             :to="item.path"
             class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-            active-class="bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400"
+            active-class="bg-copper/10 dark:bg-copper/20 text-copper"
           >
             <component :is="item.icon" class="w-5 h-5" />
             <span>{{ item.name }}</span>
@@ -97,7 +97,7 @@ async function handleLogout() {
       <!-- Top Navigation -->
       <header class="sticky top-0 z-40 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
         <div class="flex items-center justify-between h-16 px-6">
-          <button @click="sidebarOpen = true" class="md:hidden">
+          <button @click="sidebarOpen = true" class="md:hidden" aria-label="Open sidebar">
             <Bars3Icon class="w-6 h-6" />
           </button>
 
@@ -108,6 +108,7 @@ async function handleLogout() {
             <button 
               @click="themeStore.toggle()"
               class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+              aria-label="Toggle theme"
             >
               <component :is="themeStore.isDark ? SunIcon : MoonIcon" class="w-5 h-5" />
             </button>

@@ -29,7 +29,7 @@ class PermissionSeeder extends Seeder
         foreach ($permissions as $permission) {
             $permission['created_at'] = now();
             $permission['updated_at'] = now();
-            DB::table('permissions')->insert($permission);
+            DB::table('permissions')->insertOrIgnore($permission);
         }
 
         // Assign all permissions to Admin role
@@ -37,7 +37,7 @@ class PermissionSeeder extends Seeder
         $permissionIds = DB::table('permissions')->pluck('id');
 
         foreach ($permissionIds as $permissionId) {
-            DB::table('role_permission')->insert([
+            DB::table('role_permission')->insertOrIgnore([
                 'role_id' => $adminRoleId,
                 'permission_id' => $permissionId,
                 'created_at' => now(),
@@ -48,7 +48,7 @@ class PermissionSeeder extends Seeder
         $clientRoleId = DB::table('roles')->where('slug', 'client')->value('id');
         $clientPermissionId = DB::table('permissions')->where('slug', 'view_client_portal')->value('id');
         
-        DB::table('role_permission')->insert([
+        DB::table('role_permission')->insertOrIgnore([
             'role_id' => $clientRoleId,
             'permission_id' => $clientPermissionId,
             'created_at' => now(),

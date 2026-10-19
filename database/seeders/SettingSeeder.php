@@ -41,7 +41,7 @@ class SettingSeeder extends Seeder
         foreach ($settings as $setting) {
             $setting['created_at'] = now();
             $setting['updated_at'] = now();
-            DB::table('settings')->insert($setting);
+            DB::table('settings')->insertOrIgnore($setting);
         }
     }
 }

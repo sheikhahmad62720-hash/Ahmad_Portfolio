@@ -12,7 +12,9 @@ class UserSeeder extends Seeder
     {
         $adminRoleId = DB::table('roles')->where('slug', 'admin')->value('id');
 
-        DB::table('users')->insert([
+        DB::table('users')->updateOrInsert(
+            ['email' => 'sheikhahmad62720@gmail.com'],
+            [
             'name' => 'Muhammad Ahmad',
             'email' => 'sheikhahmad62720@gmail.com',
             'email_verified_at' => now(),

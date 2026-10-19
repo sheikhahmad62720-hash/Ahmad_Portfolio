@@ -31,7 +31,10 @@ class ApiKey extends Model
         return $this->expires_at && $this->expires_at->isPast();
     }
 
-    public static function getKey(string $serviceName): ?string
+    /**
+     * Rename method to prevent clashing with Eloquent's built-in getKey()
+     */
+    public static function getServiceKey(string $serviceName): ?string
     {
         $apiKey = static::where('service_name', $serviceName)
             ->where('is_active', true)

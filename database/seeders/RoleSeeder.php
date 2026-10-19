@@ -33,6 +33,6 @@ class RoleSeeder extends Seeder
             ],
         ];
 
-        DB::table('roles')->insert($roles);
+        DB::table('roles')->upsert($roles, ['slug'], ['name', 'description', 'updated_at']);
     }
 }
