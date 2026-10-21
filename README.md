@@ -1,8 +1,8 @@
-# Muhammad Ahmad - Portfolio Platform
+# Muhammad Ahmad — Portfolio Platform
 
 A full-stack portfolio and blog platform built with **Laravel 13** and **Vue.js 3 (TypeScript)**, featuring an admin dashboard, analytics, AI chatbot, and responsive UI.
 
-Built by **[Muhammad Ahmad](https://github.com/sheikhahmad62720)** — Vue.js & Laravel Developer at NBTHUB, Pakistan.
+Built by [Muhammad Ahmad](https://github.com/sheikhahmad62720) — Vue.js & Laravel Developer at NBTHUB, Pakistan.
 
 ## Features
 
@@ -16,8 +16,8 @@ Built by **[Muhammad Ahmad](https://github.com/sheikhahmad62720)** — Vue.js & 
 
 - **Backend:** Laravel 13, PHP 8.3+, Laravel Sanctum
 - **Frontend:** Vue.js 3, TypeScript, Pinia, Vue Router, Tailwind CSS
+- **Database:** SQLite (MySQL-ready)
 - **Tools:** Vite, Composer, NPM, Git
-- **Database:** SQLite (MySQL ready)
 
 ## Requirements
 
@@ -27,6 +27,8 @@ Built by **[Muhammad Ahmad](https://github.com/sheikhahmad62720)** — Vue.js & 
 - NPM 10+
 
 ## Quick Start
+
+Clone the repository and install dependencies:
 
 ```bash
 git clone <repo-url>
@@ -45,9 +47,9 @@ npm run build
 php artisan serve
 ```
 
-Open **http://localhost:8000** in your browser.
+Open [http://localhost:8000](http://localhost:8000) in your browser.
 
-### Quick Commands
+## Quick Commands
 
 ```bash
 composer setup  # Install and configure the project
