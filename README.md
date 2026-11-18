@@ -1,3 +1,5 @@
+
+
 # Muhammad Ahmad — Portfolio Platform
 
 A modern full-stack portfolio and blog platform built with **Laravel 13** and **Vue.js 3 (TypeScript)**. It showcases professional work, manages blog content, and provides an admin dashboard with analytics, AI-powered chatbot integration, and a responsive user interface.
@@ -116,3 +118,4 @@ For detailed technical information, architecture, database schema, and project r
 **Proprietary License** — © 2026 Muhammad Ahmad. All rights reserved.
 
 This project is not licensed for redistribution, modification, or commercial use without explicit permission from the copyright holder.
+
